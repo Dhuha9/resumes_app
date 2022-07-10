@@ -1,4 +1,13 @@
 <h2> in resume </h2>
-<%= render :template => "resumes/work_experiences/index" %>
-<%= render :template => "resumes/certificates/index" %>
-<%= render :template => "resumes/projects/index" %>
+
+<%= turbo_frame_tag :certificates, src: resumes_certificates_path, loading: :lazy do %>
+  Loading ...
+<% end %>
+
+<%= turbo_frame_tag :work_experiences, src: resumes_work_experiences_path, loading: :lazy do %>
+  Loading ...
+<% end %>
+
+<%= turbo_frame_tag :Projects, src: resumes_projects_path, loading: :lazy do %>
+  Loading ...
+<% end %>

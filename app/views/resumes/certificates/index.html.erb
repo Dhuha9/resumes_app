@@ -1,1 +1,3 @@
-<h2> here from Certificates view and ... <%= @message %> </h2>
+<%= turbo_frame_tag :certificates do %>
+  <h2> here from Certificates view and ... <%= @message %> </h2>
+<% end %>

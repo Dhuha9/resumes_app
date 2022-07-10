@@ -1,1 +1,3 @@
-<h2> here from Projects view and ... <%= @message %> </h2>
+<%= turbo_frame_tag :Projects do %>
+  <h2> here from Projects view and ... <%= @message %> </h2>
+<% end %>
